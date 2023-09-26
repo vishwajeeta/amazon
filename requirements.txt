@@ -1,0 +1,30 @@
+npm run build
+//to add creadit card function
+//payment integration
+npm i @stripe/stripe-js
+npm i @stripe/react-stripe-js
+API KEY="pk_test_51NEM3dSGjPggJc5SMjW8dgAJUMY8lXlhZ3CxREuPLw3UZnKvTVwqpS6ueQ6tRUyzUQ3AyjovAHuqjvHlloobJA6e00JWXQPDBI"
+
+//App.js
+import {loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+const promicse=loadStripe("pk_test_51NEM3dSGjPggJc5SMjW8dgAJUMY8lXlhZ3CxREuPLw3UZnKvTVwqpS6ueQ6tRUyzUQ3AyjovAHuqjvHlloobJA6e00JWXQPDBI");
+//higher order finction
+<Elements stripe={promise}>
+<Payment />
+</Elements>
+
+//payment.js
+import { CardElement,useElements, useStripe } from '@stripe/react-stripe-js';
+  const stripe =useStripe();
+  const elements =useElements();
+
+<from>
+<CardElement/>
+</from>
+//payment.css
+//after creating this card element will apear
+//NOTE:- if internet is not connected card element will not appear
+.payment__details{
+    flex: 0.8;
+}
