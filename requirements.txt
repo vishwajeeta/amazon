@@ -1,4 +1,4 @@
-npm start
+
 npm run build
 //to add creadit card function
 //payment integration
